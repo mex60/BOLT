@@ -77,6 +77,26 @@ def ddn():
             Label(t2, text=f"You are connected to {ww}", bg="blue",fg="white", font="TkMenuFont", compound=BOTTOM).pack()
         Button(root3, text="Connect", command=conn, bg="green").pack()
     Button(root2, text="Connect", command=search).pack()
+def boltet():
+      b = Tk()
+      b.title("BOLTet")
+      note = ttk.Notebook()
+      note.pack(expand=True, fill=BOTH)
+      def chcoin():
+            from PIL import Image, ImageTk
+            ro.pack(fill=BOTH, expand=True)
+            img = Image.open(r"C:\Users\alena\Desktop\Мишина папка для Амтэка\Картинки\i.webp")
+            tkimg = ImageTk(ro, image=img)
+            ro = ttk.Frame(note)
+            note.add(ro, text="CHCoins")
+            tkimg.pack() 
+      def gart():
+            
+            g = ttk.Frame(note)
+            g.pack(fill=BOTH, expand=True)
+            
+            note.add(g, text="GART")
+Button(root, text="BOLTet", command=boltet, bg="blue", cursor="pirate").pack()
 
 k = Button(root, text='DDN52', command=ddn, bg="green", cursor="question_arrow")
 k.pack() 
@@ -84,3 +104,4 @@ bb = Button(root, text="Connect to BOLT", command=boltconn, bg="yellow", cursor=
 
 
 root.mainloop()
+
