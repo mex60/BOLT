@@ -6,6 +6,10 @@ root.title("BOLTNET")
 root.geometry("300x300")
 enabled = IntVar() 
 reba = IntVar()
+global chcoin, gart
+chcoin=1000
+gart = 1000
+
 def boltconn():
             root4 = Tk()
             s = ['B0Ltapb_Hy6L0', 'AbybApb', '4y-4yx_4y-4yx', 'Bouны_Bceленнoй']
@@ -84,7 +88,33 @@ def boltarket():
             rt = Tk()
             rt.title("Обходной сервер ДД")
             Label(rt, text="Сервер ДД, использующий схему gridRow, a не gridColumn, что позволяет БОЛТать во время стопа.").grid(row=0, column=1)
+            tovar = {"tovar_obserdd", 20}
+            def buythis(tovar):
+                  r = Tk()
+                  r.title("Списание")
+                  if chcoin >= tovar[1]:
+                        chcoin -= tovar[1]
+                        Label(r, text=f"Списано {tovar[1]} CHCoins")
+def boltet():
+      b = Tk()
+      b.title("BOLTet")
+      note = ttk.Notebook()
+      note.pack(expand=True, fill=BOTH)
+      def chcoin():
+            from PIL import Image, ImageTk
+            ro.pack(fill=BOTH, expand=True)
+            img = Image.open(r"C:\Users\alena\Desktop\Мишина папка для Амтэка\Картинки\i.webp")
+            tkimg = ImageTk(ro, image=img)
+            ro = ttk.Frame(note)
+            note.add(ro, text="CHCoins")
+            tkimg.pack() 
+      def gart():
             
+            g = ttk.Frame(note)
+            g.pack(fill=BOTH, expand=True)
+            
+            note.add(g, text="GART")
+Button(root, text="BOLTet", command=boltet, bg="blue", cursor="pirate").pack()
 
 k = Button(root, text='DDN52', command=ddn, bg="green", cursor="question_arrow")
 k.pack() 
@@ -92,3 +122,4 @@ bb = Button(root, text="Connect to BOLT", command=boltconn, bg="yellow", cursor=
 
 
 root.mainloop()
+
