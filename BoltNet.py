@@ -77,6 +77,14 @@ def ddn():
             Label(t2, text=f"You are connected to {ww}", bg="blue",fg="white", font="TkMenuFont", compound=BOTTOM).pack()
         Button(root3, text="Connect", command=conn, bg="green").pack()
     Button(root2, text="Connect", command=search).pack()
+def boltarket():
+      rot = Tk()
+      rot.title("BOLTarket")
+      def tovar_obserdd():
+            rt = Tk()
+            rt.title("Обходной сервер ДД")
+            Label(rt, text="Сервер ДД, использующий схему gridRow, a не gridColumn, что позволяет БОЛТать во время стопа.").grid(row=0, column=1)
+            
 
 k = Button(root, text='DDN52', command=ddn, bg="green", cursor="question_arrow")
 k.pack() 
